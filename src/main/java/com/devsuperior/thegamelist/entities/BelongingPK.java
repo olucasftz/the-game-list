@@ -4,19 +4,19 @@ import java.util.Objects;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 
 @Embeddable
 public class BelongingPK {
 
-	@ManyToMany
-	@JoinColumn(name = "game_id")
-	private Game game;
-	
-	@ManyToMany
-	@JoinColumn(name = "list_id") // define the junction column
-	private GameList list;
-	
+	@ManyToOne
+    @JoinColumn(name = "game_id")
+    private Game game;
+
+    @ManyToOne
+    @JoinColumn(name = "list_id")
+    private GameList list;
+
 	public Game getGame() {
 		return game;
 	}
