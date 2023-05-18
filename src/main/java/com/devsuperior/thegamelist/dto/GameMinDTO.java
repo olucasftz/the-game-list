@@ -22,7 +22,7 @@ import com.devsuperior.thegamelist.projections.GameMinProjection;
 		public GameMinDTO(GameMinProjection projection) {
 			id = projection.getId();
 			title = projection.getTitle();
-			year = projection.getYear();
+			year = projection.getGameYear();
 			imgUrl = projection.getImgUrl();
 			shortDescription = projection.getShortDescription();
 		}
